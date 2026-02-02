@@ -1,0 +1,1 @@
+-rw-r--r-- 1 user1 user1 0 Feb  2 15:45 sampleFile2.txt

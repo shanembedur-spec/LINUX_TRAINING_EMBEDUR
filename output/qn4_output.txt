@@ -1,0 +1,25 @@
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1 165912 11008 ?        Ss   14:48   0:00 /sbin/init
+root           2  0.0  0.0   3120  1920 ?        Sl   14:48   0:00 /init
+root           6  0.0  0.0   3136  1888 ?        Sl   14:48   0:00 plan9 --control-socket 7 --log-level 4 --server-fd 8 --pipe-fd 10 --log-truncate
+root          63  0.0  0.1  56020 14188 ?        S<s  14:48   0:00 /lib/systemd/systemd-journald
+root          89  0.0  0.0  22848  5632 ?        Ss   14:48   0:00 /lib/systemd/systemd-udevd
+systemd+      92  0.0  0.1  25672 12900 ?        Ss   14:48   0:00 /lib/systemd/systemd-resolved
+systemd+      93  0.0  0.0  89364  7296 ?        Ssl  14:48   0:00 /lib/systemd/systemd-timesyncd
+root         178  0.0  0.0   4308  2560 ?        Ss   14:48   0:00 /usr/sbin/cron -f -P
+message+     180  0.0  0.0   8580  4352 ?        Ss   14:48   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         185  0.0  0.2  30140 18560 ?        Ss   14:48   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+syslog       186  0.0  0.0 222404  5248 ?        Ssl  14:48   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         192  0.0  0.0  15328  7296 ?        Ss   14:48   0:00 /lib/systemd/systemd-logind
+root         215  0.0  0.0   3240  2176 hvc0     Ss+  14:48   0:00 /sbin/agetty -o -p -- \u --noclear --keep-baud console 115200,38400,9600 vt220
+root         217  0.0  0.0   3196  2176 tty1     Ss+  14:48   0:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+root         220  0.0  0.2 107164 21120 ?        Ssl  14:48   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root         287  0.0  0.0   3128   768 ?        Ss   14:48   0:00 /init
+root         288  0.0  0.0   3144  1152 ?        S    14:48   0:00 /init
+user1        289  0.0  0.0   6264  5120 pts/0    Ss   14:48   0:00 -bash
+root         290  0.0  0.0   7536  4608 pts/1    Ss   14:48   0:00 /bin/login -f
+user1        321  0.0  0.1  16952  9344 ?        Ss   14:48   0:00 /lib/systemd/systemd --user
+user1        322  0.0  0.0 103432  5216 ?        S    14:48   0:00 (sd-pam)
+user1        334  0.0  0.0   6168  4992 pts/1    S+   14:48   0:00 -bash
+user1        729  0.0  0.0   6264  3656 pts/0    S+   15:46   0:00 -bash
+user1        730  0.0  0.0   7484  3072 pts/0    R+   15:46   0:00 ps aux
