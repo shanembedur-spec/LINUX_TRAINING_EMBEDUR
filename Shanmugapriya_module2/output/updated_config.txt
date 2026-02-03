@@ -1,0 +1,4 @@
+server_name=127.0.0.1
+port=8080
+database_host=127.0.0.1
+api_endpoint=http://127.0.0.1/api/v1
