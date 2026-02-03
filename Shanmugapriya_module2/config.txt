@@ -1,0 +1,4 @@
+server_name=localhost
+port=8080
+database_host=localhost
+api_endpoint=http://localhost/api/v1
