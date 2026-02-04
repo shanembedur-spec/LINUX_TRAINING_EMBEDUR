@@ -16,7 +16,7 @@ if [ ! -d "$SRC_DIR" ]; then
   mkdir -p "$SRC_DIR" || { echo "Failed to create source dir"; exit 1; }
 fi
 
-# --- Step 4: Find files ---
+# --- Step 4: Find files with given extension ---
 files=( $(find "$SRC_DIR" -type f -name "*$EXT") )
 
 if [ ${#files[@]} -eq 0 ]; then
@@ -36,11 +36,15 @@ done
 # --- Step 7: Export count ---
 export BACKUP_COUNT=${#files[@]}
 
+# --- Step 7.1: Calculate total size of backed-up files ---
+TOTAL_SIZE=$(du -ch "${files[@]}" 2>/dev/null | grep total$ | awk '{print $1}')
+
 # --- Step 8: Create report ---
 REPORT="$BACKUP_DIR/backup_report.log"
 {
   echo "Backup Report - $(date)"
   echo "Total files copied: $BACKUP_COUNT"
+  echo "Total size of files backed up: $TOTAL_SIZE"
   echo "Files:"
   printf "%s\n" "${files[@]}"
   echo "Backup directory: $BACKUP_DIR"
